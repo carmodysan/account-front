@@ -54,13 +54,16 @@ export default {
          *  Initialisation des objets nécessaires à la page
         */
         async init() {
+            console.log("Initialize...");
             await axios.get('https://safe-cove-03131.herokuapp.com/api/monthly_accounts')
                 .then((response) => {
                     this.months = response.data['hydra:member'];
+                    console.log("Get response.");
                 })
                 .finally(() => {
-                    this.convertMonthsToObject();
+                    //this.convertMonthsToObject();
                     this.allLoaded = true;
+                    console.log("Response saved.");
                 });
         },
 
