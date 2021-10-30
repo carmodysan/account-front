@@ -33,6 +33,7 @@
                 </v-expansion-panel>
             </v-expansion-panels>
         </div>
+        <div>{{ months }}</div>
     </v-container>
 </template>
 
